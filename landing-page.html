@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Landing Page — JetBlue Lookbook</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 0; font-family: 'Mulish', system-ui, -apple-system, sans-serif; color: #1A1A1A; background: #fff; font-size: 17px; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+  html { scroll-behavior: smooth; }
+  a { color: inherit; text-decoration: none; }
+  a:hover { color: #0026CC; }
+  img { max-width: 100%; display: block; }
+
+  .lp-back-bar { max-width: 1100px; margin: 0 auto; padding: 18px 24px 0; }
+  .lp-back-bar a { font-size: 13px; font-weight: 700; color: #0033FF; text-decoration: none; }
+  .lp-back-bar a:hover { text-decoration: underline; }
+
+  .lp-comments { max-width: 1100px; margin: 0 auto; padding: 40px 40px 64px; }
+
+  .tab-btn { flex: 1; background: transparent; color: rgba(255,255,255,0.85); border: none; padding: 14px 20px; font-family: inherit; font-size: 15px; font-weight: 700; border-radius: 100px; cursor: pointer; letter-spacing: 0.01em; }
+  .tab-btn.active { background: #29F5D9; color: #0B1F4D; }
+
+  .faq-item { border: 1px solid rgba(255,255,255,0.16); border-radius: 18px; overflow: hidden; background: rgba(255,255,255,0.04); }
+  .faq-toggle { width: 100%; background: transparent; border: none; padding: 22px 28px; display: grid; grid-template-columns: 1fr 36px; align-items: center; gap: 16px; cursor: pointer; font-family: inherit; text-align: left; color: #fff; }
+  .faq-q { font-weight: 700; color: #fff; font-size: 17px; line-height: 1.4; }
+  .faq-icon { width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.1); color: #fff; display: grid; place-items: center; flex-shrink: 0; font-weight: 700; font-size: 20px; line-height: 1; transition: transform .15s, background .15s, color .15s; }
+  .faq-item.open .faq-icon { background: #29F5D9; color: #0B1F4D; transform: rotate(45deg); }
+  .faq-answer { padding: 0 28px 24px; display: none; }
+  .faq-item.open .faq-answer { display: block; }
+  .faq-answer p { color: #fff; font-size: 15.5px; line-height: 1.55; margin: 0; }
+
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
+</style>
+</head>
+<body>
+
+<div class="lp-back-bar"><a href="index.html">&larr; Back to Lookbook</a></div>
+
+<div style="display:flex;justify-content:center;align-items:center;gap:28px;padding:20px 40px 16px;flex-wrap:wrap;">
+  <img src="assets/jetblue-logo.png" alt="JetBlue" style="height:44px;">
+  <span style="width:1px;height:46px;background:#D5DBE5;"></span>
+  <img src="assets/hike-logo-blue.png" alt="Hike Medical" style="height:78px;margin:-20px 0;">
+</div>
+
+<section style="padding:24px 0 32px;">
+  <div style="max-width:1100px;margin:0 auto;padding:0 40px;">
+    <h1 style="font-size:56px;line-height:1.05;font-weight:800;letter-spacing:-0.01em;margin:0 0 22px;color:#1A1A1A;width:100%;">On your feet all day? Real support is available through JetBlue.</h1>
+    <p style="font-size:18px;color:#2A2F3A;margin:0 0 28px;">JetBlue has secured exclusive pricing on Hike Medical custom insoles for crewmembers. Pairs are $150 each, HSA-eligible, with savings when you reorder or share the benefit with family.</p>
+    <a href="https://hikemedical.com/jetblue" target="_blank" rel="noopener" style="display:inline-block;background:#0033FF;color:#fff;padding:16px 32px;border-radius:100px;font-weight:700;font-size:16px;text-decoration:none;border:none;cursor:pointer;font-family:inherit;letter-spacing:0.005em;">Get Your Custom Insoles</a>
+
+    <div style="margin-top:0;display:grid;place-items:center;">
+      <img src="assets/product-image.png" alt="Hike Medical custom insole with shoe and app scan flow" style="max-width:620px;width:100%;height:auto;">
+    </div>
+
+    <p style="font-size:17px;color:#2A2F3A;margin:16px 0 0;line-height:1.6;">When your feet aren't supported, your knees absorb extra stress, your hips compensate, and your lower back tightens to pick up the slack. The fatigue and soreness follows you the rest of the day affecting everything from your mood to sleep. Custom insoles are built to fit your actual foot shape helping your body move the way it's meant to, instead of offloading the work up your skeleton.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px;margin-top:40px;">
+      <div style="border-radius:24px;padding:32px 36px;position:relative;overflow:hidden;background:#0033FF;color:#fff;">
+        <div style="font-size:26px;font-weight:800;margin-bottom:14px;">Your Rate:</div>
+        <div style="font-size:16px;line-height:1.5;margin-bottom:18px;color:#DCE3FF;">Exclusive JetBlue crewmember pricing, paid directly to Hike. No claims or paperwork required.</div>
+        <div style="font-size:16px;font-weight:700;line-height:1.45;">$150 per pair, HSA-eligible.</div>
+      </div>
+      <div style="border-radius:24px;padding:32px 36px;position:relative;overflow:hidden;background:#fff;color:#0033FF;border:2px solid #0033FF;">
+        <div style="font-size:26px;font-weight:800;margin-bottom:14px;">Keep Saving:</div>
+        <div style="font-size:16px;line-height:1.5;margin-bottom:18px;color:#2A4DD8;">Reorder any pair after your first, or extend the same rate to a family member through a special access link from Hike support.</div>
+        <div style="font-size:16px;font-weight:700;line-height:1.45;">Discounted to $135, HSA-eligible</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#fff;padding:32px 0 56px;">
+  <div style="max-width:1100px;margin:0 auto;padding:0 40px;">
+    <div style="text-align:center;max-width:760px;margin:0 auto 28px;">
+      <h2 style="font-size:36px;font-weight:800;letter-spacing:-0.01em;margin:0 0 8px;">How Hike Compares</h2>
+    </div>
+    <div style="overflow-x:auto;">
+    <table style="width:100%;min-width:640px;border-collapse:separate;border-spacing:0;background:#fff;border:1.5px solid #E5E8EF;border-radius:20px;overflow:hidden;font-size:15.5px;box-shadow:0 8px 30px rgba(11,31,77,0.06);">
+      <thead>
+        <tr>
+          <th style="background:#fff;text-align:left;padding:18px 20px;border-bottom:1.5px solid #E5E8EF;">&nbsp;</th>
+          <th style="background:#EEF1FF;color:#0033FF;font-size:18px;font-weight:900;text-align:center;padding:18px 20px;border-bottom:1.5px solid #E5E8EF;">Hike</th>
+          <th style="background:#F4F6FA;color:#1A1A1A;font-weight:800;text-align:center;padding:18px 20px;font-size:14px;letter-spacing:0.02em;border-bottom:1.5px solid #E5E8EF;">Over the counter</th>
+          <th style="background:#F4F6FA;color:#1A1A1A;font-weight:800;text-align:center;padding:18px 20px;font-size:14px;letter-spacing:0.02em;border-bottom:1.5px solid #E5E8EF;">Traditional Custom</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding:18px 20px;border-bottom:1px solid #E5E8EF;text-align:left;font-weight:700;color:#1A1A1A;">Custom built for you</td>
+          <td style="padding:18px 20px;border-bottom:1px solid #E5E8EF;text-align:center;background:#EEF1FF;font-weight:700;color:#0B1F4D;"><span style="color:#0033FF;font-weight:800;font-size:22px;line-height:1;">✓</span></td>
+          <td style="padding:18px 20px;border-bottom:1px solid #E5E8EF;text-align:center;color:#1A1A1A;"><span style="color:#E63946;font-weight:800;font-size:18px;">✕</span></td>
+          <td style="padding:18px 20px;border-bottom:1px solid #E5E8EF;text-align:center;color:#1A1A1A;"><span style="color:#C2C7D2;font-weight:800;font-size:22px;line-height:1;">✓</span></td>
+        </tr>
+        <tr>
+          <td style="padding:18px 20px;border-bottom:1px solid #E5E8EF;text-align:left;font-weight:700;color:#1A1A1A;">Helps prevent bunions &amp; ulcers</td>
+          <td style="padding:18px 20px;border-bottom:1px solid #E5E8EF;text-align:center;background:#EEF1FF;font-weight:700;color:#0B1F4D;"><span style="color:#0033FF;font-weight:800;font-size:22px;line-height:1;">✓</span></td>
+          <td style="padding:18px 20px;border-bottom:1px solid #E5E8EF;text-align:center;color:#1A1A1A;"><span style="color:#E63946;font-weight:800;font-size:18px;">✕</span></td>
+          <td style="padding:18px 20px;border-bottom:1px solid #E5E8EF;text-align:center;color:#1A1A1A;"><span style="color:#C2C7D2;font-weight:800;font-size:22px;line-height:1;">✓</span></td>
+        </tr>
+        <tr>
+          <td style="padding:18px 20px;border-bottom:1px solid #E5E8EF;text-align:left;font-weight:700;color:#1A1A1A;">Promotes body alignment</td>
+          <td style="padding:18px 20px;border-bottom:1px solid #E5E8EF;text-align:center;background:#EEF1FF;font-weight:700;color:#0B1F4D;"><span style="color:#0033FF;font-weight:800;font-size:22px;line-height:1;">✓</span></td>
+          <td style="padding:18px 20px;border-bottom:1px solid #E5E8EF;text-align:center;color:#1A1A1A;"><span style="color:#E63946;font-weight:800;font-size:18px;">✕</span></td>
+          <td style="padding:18px 20px;border-bottom:1px solid #E5E8EF;text-align:center;color:#1A1A1A;"><span style="color:#C2C7D2;font-weight:800;font-size:22px;line-height:1;">✓</span></td>
+        </tr>
+        <tr>
+          <td style="padding:18px 20px;border-bottom:1px solid #E5E8EF;text-align:left;font-weight:700;color:#1A1A1A;">Built to last</td>
+          <td style="padding:18px 20px;border-bottom:1px solid #E5E8EF;text-align:center;background:#EEF1FF;font-weight:700;color:#0B1F4D;"><span style="color:#0033FF;font-weight:800;font-size:22px;line-height:1;">✓</span></td>
+          <td style="padding:18px 20px;border-bottom:1px solid #E5E8EF;text-align:center;color:#1A1A1A;"><span style="color:#E63946;font-weight:800;font-size:18px;">✕</span></td>
+          <td style="padding:18px 20px;border-bottom:1px solid #E5E8EF;text-align:center;color:#1A1A1A;"><span style="color:#C2C7D2;font-weight:800;font-size:22px;line-height:1;">✓</span></td>
+        </tr>
+        <tr>
+          <td style="padding:18px 20px;border-bottom:1px solid #E5E8EF;text-align:left;font-weight:700;color:#1A1A1A;">Speed</td>
+          <td style="padding:18px 20px;border-bottom:1px solid #E5E8EF;text-align:center;background:#EEF1FF;font-weight:700;color:#0B1F4D;">5 minute scan</td>
+          <td style="padding:18px 20px;border-bottom:1px solid #E5E8EF;text-align:center;color:#1A1A1A;">A trip to the store</td>
+          <td style="padding:18px 20px;border-bottom:1px solid #E5E8EF;text-align:center;color:#1A1A1A;">3-4 clinical visits</td>
+        </tr>
+        <tr>
+          <td style="padding:18px 20px;border-bottom:1px solid #E5E8EF;text-align:left;font-weight:700;color:#1A1A1A;">Time commitment</td>
+          <td style="padding:18px 20px;border-bottom:1px solid #E5E8EF;text-align:center;background:#EEF1FF;font-weight:700;color:#0B1F4D;">Delivered to your door in 2 weeks</td>
+          <td style="padding:18px 20px;border-bottom:1px solid #E5E8EF;text-align:center;color:#1A1A1A;">Trying on your own for weeks</td>
+          <td style="padding:18px 20px;border-bottom:1px solid #E5E8EF;text-align:center;color:#1A1A1A;">9 weeks end to end</td>
+        </tr>
+        <tr>
+          <td style="padding:18px 20px;text-align:left;font-weight:700;color:#1A1A1A;">Fit guarantee</td>
+          <td style="padding:18px 20px;text-align:center;background:#EEF1FF;font-weight:700;color:#0B1F4D;">Amazing fit or Hike will rebuild for free</td>
+          <td style="padding:18px 20px;text-align:center;color:#1A1A1A;">None</td>
+          <td style="padding:18px 20px;text-align:center;color:#1A1A1A;">Depends</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</section>
+
+<section style="background:#fff;padding:64px 0;">
+  <div style="max-width:1100px;margin:0 auto;padding:0 40px;">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:48px;align-items:start;">
+      <div>
+        <div style="position:relative;width:100%;aspect-ratio:16/9;border-radius:16px;overflow:hidden;background:#000;box-shadow:0 12px 32px rgba(0,0,0,0.18);">
+          <iframe src="https://www.youtube-nocookie.com/embed/tGR3U0aw4Qo" title="Hike Medical Process Overview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0;"></iframe>
+        </div>
+        <a href="https://hikemedical.com/jetblue" target="_blank" rel="noopener" style="display:block;text-align:center;margin-top:20px;background:#0033FF;color:#fff;padding:14px 28px;border-radius:100px;font-weight:700;font-size:16px;text-decoration:none;font-family:inherit;">Get Your Pair</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:20px;">
+        <article style="display:flex;gap:14px;">
+          <div>
+            <h3 style="font-size:16px;font-weight:800;margin:0 0 4px;">1. Scan</h3>
+            <ul style="margin:0;padding-left:16px;color:#2A2F3A;font-size:13.5px;line-height:1.45;display:flex;flex-direction:column;gap:4px;">
+              <li>Use any mobile device to scan your feet, no app download required.</li>
+              <li>There's two scanning methods to choose from: Scan yourself or have a friend perform the scan.</li>
+              <li>A tutorial will teach you the simple scanning technique of keeping the foot centered and gliding the camera from side to side.</li>
+            </ul>
+          </div>
+        </article>
+        <article style="display:flex;gap:14px;">
+          <div>
+            <h3 style="font-size:16px;font-weight:800;margin:0 0 4px;">2. Build</h3>
+            <p style="color:#2A2F3A;font-size:13.5px;line-height:1.45;margin:0;">Your custom insoles are built directly from your scan.</p>
+          </div>
+        </article>
+        <article style="display:flex;gap:14px;">
+          <div>
+            <h3 style="font-size:16px;font-weight:800;margin:0 0 4px;">3. Deliver</h3>
+            <p style="color:#2A2F3A;font-size:13.5px;line-height:1.45;margin:0;">Arrives within 2 weeks, ready to wear right out of the box.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#0033FF;color:#fff;padding:44px 0;">
+  <div style="max-width:1100px;margin:0 auto;padding:0 40px;">
+    <h2 style="color:#fff;text-align:left;margin:0 auto 28px;font-size:40px;max-width:920px;font-weight:800;letter-spacing:-0.01em;">Why Hike</h2>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:32px;max-width:920px;margin:0 auto 28px;">
+      <div>
+        <div style="font-size:60px;font-weight:900;line-height:1;color:#29F5D9;margin-bottom:10px;letter-spacing:-0.02em;">66%</div>
+        <div style="color:#fff;font-size:15px;line-height:1.45;">of Hike users reported improvements in muscle and joint symptoms*</div>
+      </div>
+      <div>
+        <div style="font-size:60px;font-weight:900;line-height:1;color:#29F5D9;margin-bottom:10px;letter-spacing:-0.02em;">53%</div>
+        <div style="color:#fff;font-size:15px;line-height:1.45;">reported less pain after using Hike insoles*</div>
+      </div>
+      <div>
+        <div style="font-size:60px;font-weight:900;line-height:1;color:#29F5D9;margin-bottom:10px;letter-spacing:-0.02em;">54%</div>
+        <div style="color:#fff;font-size:15px;line-height:1.45;">reported more energy at work*</div>
+      </div>
+    </div>
+
+    <div style="max-width:920px;margin:0 auto;padding:20px 0 0;border-top:1px solid rgba(255,255,255,0.25);">
+      <blockquote style="font-size:22px;line-height:1.45;font-weight:500;color:#fff;margin:0 0 20px;font-style:italic;">"For years I have been dealing with knee pain. The day I went to work with my custom insoles I felt like a new man! Walking doesn't hurt. I felt like I could actually run! And my knee pain disappeared!"</blockquote>
+      <div style="color:#29F5D9;font-weight:700;font-size:15px;">Hike Member</div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#0B1F4D;color:#fff;padding:90px 0;">
+  <div style="max-width:1100px;margin:0 auto;padding:0 40px;">
+    <div style="text-align:center;margin-bottom:32px;">
+      <span style="color:#29F5D9;display:block;margin-bottom:12px;font-weight:700;font-size:15px;letter-spacing:0.02em;">Everything You Need to Know</span>
+      <h2 style="color:#fff;font-size:40px;font-weight:800;letter-spacing:-0.01em;margin:0;">Your Benefit Details &amp; FAQs</h2>
+    </div>
+
+    <div style="display:flex;justify-content:center;gap:8px;background:rgba(255,255,255,0.08);border-radius:100px;padding:6px;max-width:600px;margin:0 auto 32px;flex-wrap:wrap;">
+      <button class="tab-btn active" id="tabBtnBenefits" onclick="setTab('benefits')">Your Benefit Details</button>
+      <button class="tab-btn" id="tabBtnHowto" onclick="setTab('howto')">How to Scan</button>
+      <button class="tab-btn" id="tabBtnFaqs" onclick="setTab('faqs')">FAQs</button>
+    </div>
+
+    <div class="tab-panel active" id="panelBenefits">
+      <div style="border:1px solid rgba(255,255,255,0.16);border-radius:18px;background:rgba(255,255,255,0.04);padding:8px 28px 24px;">
+        <div style="padding:18px 0;border-bottom:1px solid rgba(255,255,255,0.16);margin-bottom:4px;">
+          <span style="font-weight:800;color:#fff;font-size:17px;letter-spacing:-0.005em;">What's included in your benefit</span>
+        </div>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:14px;">
+          <li style="padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.10);"><span style="position:relative;padding-left:32px;color:#fff;font-size:15.5px;line-height:1.5;display:block;"><span style="position:absolute;left:0;top:4px;width:18px;height:18px;background:#29F5D9;border-radius:50%;display:inline-block;"></span>Exclusive JetBlue crewmember pricing at $150 per pair, HSA-eligible</span></li>
+          <li style="padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.10);"><span style="position:relative;padding-left:32px;color:#fff;font-size:15.5px;line-height:1.5;display:block;"><span style="position:absolute;left:0;top:4px;width:18px;height:18px;background:#29F5D9;border-radius:50%;display:inline-block;"></span>Reorder any pair after your first at $135, a $15 savings</span></li>
+          <li style="padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.10);"><span style="position:relative;padding-left:32px;color:#fff;font-size:15.5px;line-height:1.5;display:block;"><span style="position:absolute;left:0;top:4px;width:18px;height:18px;background:#29F5D9;border-radius:50%;display:inline-block;"></span>Share the same $135 rate with a family member through a special access link from Hike support</span></li>
+          <li style="padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.10);"><span style="position:relative;padding-left:32px;color:#fff;font-size:15.5px;line-height:1.5;display:block;"><span style="position:absolute;left:0;top:4px;width:18px;height:18px;background:#29F5D9;border-radius:50%;display:inline-block;"></span>Made in the U.S. and shipped to your home</span></li>
+          <li style="padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.10);"><span style="position:relative;padding-left:32px;color:#fff;font-size:15.5px;line-height:1.5;display:block;"><span style="position:absolute;left:0;top:4px;width:18px;height:18px;background:#29F5D9;border-radius:50%;display:inline-block;"></span>Amazing fit guarantee or we rebuild them for free</span></li>
+          <li style="padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.10);"><span style="position:relative;padding-left:32px;color:#fff;font-size:15.5px;line-height:1.5;display:block;"><span style="position:absolute;left:0;top:4px;width:18px;height:18px;background:#29F5D9;border-radius:50%;display:inline-block;"></span>No doctor visits or paperwork needed</span></li>
+          <li style="padding:14px 0;"><span style="position:relative;padding-left:32px;color:#fff;font-size:15.5px;line-height:1.5;display:block;"><span style="position:absolute;left:0;top:4px;width:18px;height:18px;background:#29F5D9;border-radius:50%;display:inline-block;"></span>Support available by text messaging, email, in-portal chat, and phone</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="panelHowto">
+      <div style="max-width:920px;margin:0 auto;">
+        <div style="text-align:center;margin-bottom:28px;">
+          <h3 style="color:#fff;font-size:26px;font-weight:800;letter-spacing:-0.01em;margin:0;">Watch the 5-minute scan walkthrough</h3>
+        </div>
+        <div style="position:relative;width:100%;aspect-ratio:16/9;border-radius:16px;overflow:hidden;background:#000;box-shadow:0 20px 60px rgba(0,0,0,0.35);border:1px solid rgba(255,255,255,0.12);">
+          <iframe src="https://www.youtube-nocookie.com/embed/BR-3akjv53g" title="How to scan your feet with Hike" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0;"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="panelFaqs">
+      <div style="display:flex;flex-direction:column;gap:12px;">
+        <div class="faq-item">
+          <button class="faq-toggle" onclick="toggleFaq(this)"><span class="faq-q">How do I know this is legitimate?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>This benefit is provided through JetBlue. Questions? Reach out to Hike User Support at <a href="mailto:support@hikemedical.com" style="color:#29F5D9;text-decoration:underline;">support@hikemedical.com</a> or 309-306-3696.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-toggle" onclick="toggleFaq(this)"><span class="faq-q">Who is eligible?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>All JetBlue crewmembers. Your first pair is $150. Any pair after that is $135, a $15 savings.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-toggle" onclick="toggleFaq(this)"><span class="faq-q">Is this covered by insurance?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>No. This is a voluntary benefit paid directly to Hike at your exclusive JetBlue rate, not an insurance claim. There's no paperwork or insurance involved.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-toggle" onclick="toggleFaq(this)"><span class="faq-q">Can I share this with a family member?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>Yes. Contact Hike support at <a href="mailto:support@hikemedical.com" style="color:#29F5D9;text-decoration:underline;">support@hikemedical.com</a> for a special access link that extends the $135 rate to a family member.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-toggle" onclick="toggleFaq(this)"><span class="faq-q">Do I need a doctor's prescription?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>No prescription required. Order anytime, no appointments needed.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-toggle" onclick="toggleFaq(this)"><span class="faq-q">What if I need help?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>Support is available by text, email, in-portal chat, and phone. Hike User Support: <a href="mailto:support@hikemedical.com" style="color:#29F5D9;text-decoration:underline;">support@hikemedical.com</a> | 309-306-3696.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-toggle" onclick="toggleFaq(this)"><span class="faq-q">What if they don't fit?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>Amazing fit guarantee. If your insoles aren't fitting right, we'll rebuild them for free.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-toggle" onclick="toggleFaq(this)"><span class="faq-q">Is my information private during the scan?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>Yes. The scan captures only the shape of your feet. No location data is recorded.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding:48px 0 32px;background:#fff;border-top:1px solid #E5E8EF;">
+  <div style="max-width:1100px;margin:0 auto;padding:0 40px;">
+    <p style="font-size:12px;line-height:1.6;color:#5B6478;max-width:1000px;margin:0 auto 12px;">*Averages based on survey results conducted with a population of Hike members during their first year of using Hike insoles. Timing of respondents' results range from their first ten weeks to their first six months.</p>
+    <p style="font-size:12px;line-height:1.6;color:#5B6478;max-width:1000px;margin:0 auto;">Eligibility to receive Hike Custom Insoles is subject to the agreement between your organization and Hike Medical, including your current employment and/or membership status. Questions? Contact your benefits administrator or <a href="mailto:support@hikemedical.com" style="color:#0033FF;">support@hikemedical.com</a>.</p>
+  </div>
+</section>
+
+<div style="background:#0B1F4D;padding-top:1px;">
+  <div class="lp-comments" style="color:#1A1A1A;">
+    <div style="background:#fff; border-radius:14px; padding:8px 24px 24px;">
+      <div id="comments-root" data-page="landing-page"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function setTab(name) {
+    ['benefits', 'howto', 'faqs'].forEach(function (t) {
+      document.getElementById('panel' + t.charAt(0).toUpperCase() + t.slice(1)).classList.toggle('active', t === name);
+      document.getElementById('tabBtn' + t.charAt(0).toUpperCase() + t.slice(1)).classList.toggle('active', t === name);
+    });
+  }
+  function toggleFaq(btn) {
+    var item = btn.closest('.faq-item');
+    var wasOpen = item.classList.contains('open');
+    item.classList.toggle('open', !wasOpen);
+    btn.querySelector('.faq-icon').textContent = !wasOpen ? '×' : '+';
+  }
+</script>
+
+<script src="js/comments-config.js"></script>
+<script src="js/comments.js"></script>
+<script src="js/nav.js"></script>
+</body>
+</html>
